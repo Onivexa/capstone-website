@@ -1,0 +1,65 @@
+.features-bg {
+    background-image: url('../assets/healthcarebg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 50px 15px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+ 
+  .feature-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 25px;
+    max-width: 900px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+  
+  .feature-card {
+    background: rgba(10, 25, 47, 0.85);
+    border-radius: 12px;
+    padding: 14px;
+    width: 28%;
+    min-width: 250px;
+    text-align: center;
+    color: #f0f6fc;
+    box-shadow: 0 3px 16px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .feature-card img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 12px;
+  }
+  
+  .feature-card p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #cceeff;
+  }
+  
+  @media (max-width: 768px) {
+    .feature-row {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .feature-card {
+      width: 90%;
+    }
+  }
+  

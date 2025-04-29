@@ -1,0 +1,316 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.home-bg,
+.projects-bg {
+  background-image: url('../assets/healthcarebg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  padding: 40px 20px;
+  position: relative;
+}
+
+.home-bg::before,
+.projects-bg::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.slide, .projects {
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 60px 40px;
+  border-radius: 20px;
+  animation: fadeInUp 1s ease;
+  text-align: center;
+}
+
+.title-slide h1,
+.projects h1 {
+  font-size: 40px;
+  color: #003366;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-bottom: 30px;
+}
+
+.intro-slide p,
+.structure-slide p,
+.projects p {
+  font-size: 18px;
+  color: #000000;
+  margin-bottom: 20px;
+  line-height: 1.8;
+  max-width: 900px;
+  margin: 0 auto 40px;
+}
+
+.button {
+  background: linear-gradient(to right, #1f78b4, #0077b6);
+  color: white;
+  padding: 18px 40px;
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 20px;
+}
+
+.button:hover {
+  background: #ffdd57;
+  color: #003366;
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  margin: 40px auto;
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  color: #f0f6fc;
+  background-color: rgba(10, 25, 47, 0.9);
+}
+
+.darkblue-1 { background: linear-gradient(135deg, #0a1f2d, #16324a); }
+.darkblue-2 { background: linear-gradient(135deg, #102b3f, #1f3e5a); }
+.darkblue-3 { background: linear-gradient(135deg, #0d2239, #264a66); }
+.darkblue-4 { background: linear-gradient(135deg, #112c3d, #1c4964); }
+.darkblue-5 { background: linear-gradient(135deg, #142d46, #1f4560); }
+.darkblue-6 { background: linear-gradient(135deg, #1a324d, #254b65); }
+.darkblue-7 { background: linear-gradient(135deg, #0c1f33, #213b55); }
+
+.container.darkblue-hover {
+  transition: all 0.4s ease;
+  cursor: default;
+}
+
+.container.darkblue-hover:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 16px 32px rgba(0, 255, 255, 0.15),
+              0 0 20px rgba(0, 136, 204, 0.2);
+  border: 1px solid rgba(0, 191, 255, 0.2);
+}
+
+.container h2,
+.container h3,
+.container h4 {
+  color: #bbdefb;
+}
+
+.container p {
+  color: #cceeff;
+  line-height: 1.8;
+  font-size: 18px;
+}
+
+.container ul {
+  padding-left: 20px;
+}
+
+.container ul li::before {
+  content: none;  
+}
+
+
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 80px;
+  width: 100%;
+  padding: 0 10px;
+}
+
+.project-card {
+  background: linear-gradient(to bottom right, #0d2239, #1a344e);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: all 0.4s ease;
+  overflow: hidden;
+  max-height: 220px;
+  color: #e1f5fe;
+}
+
+.project-card:hover {
+  max-height: 500px;
+  box-shadow: 0 20px 35px rgba(0, 255, 255, 0.15),
+              0 0 25px rgba(0, 136, 204, 0.25);
+  transform: translateY(-6px);
+}
+
+.project-card h3 {
+  font-size: 26px;
+  color: #bbdefb;
+  margin-bottom: 12px;
+}
+
+.project-card p {
+  font-size: 17px;
+  color: #cceeff;
+  line-height: 1.7;
+  margin-top: 10px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.project-card:hover p {
+  opacity: 1;
+}
+
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-top: 15px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.project-card:hover img {
+  opacity: 1;
+}
+
+.project-link {
+  background: linear-gradient(to right, #1f78b4, #0077b6);
+  color: white;
+  padding: 12px 26px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.project-link:hover {
+  background: #ffdd57;
+  color: #003366;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .slide, .projects {
+    padding: 40px 20px;
+  }
+
+  .title-slide h1, .projects h1 {
+    font-size: 30px;
+  }
+
+  .projects p, .project-card p {
+    font-size: 16px;
+  }
+
+  .project-card h3 {
+    font-size: 20px;
+  }
+
+  .project-link {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+}
+
+.team-member,
+.additional-info {
+  border: 4px solid #1f78b4; 
+  box-sizing: border-box; 
+}
+
+.typing-main, .typing-sub {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #1f78b4; /* Cursor */
+  font-size: 50px; /* Adjust font size */
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+  color: #f0f6fc;
+}
+
+.typing-main {
+  animation: typingMain 4s steps(30, end) 1s forwards, blinkCursor 0.75s step-end infinite;
+}
+
+.typing-sub {
+  font-size: 22px; 
+  animation: typingSub 5s steps(50, end) 5s forwards, blinkCursor 0.75s step-end infinite;
+}
+
+
+@keyframes blinkCursor {
+  0% { border-right-color: transparent; }
+  50% { border-right-color: #1f78b4; }
+  100% { border-right-color: transparent; }
+}
+
+@keyframes typingMain {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
+
+@keyframes typingSub {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
+
+
+.typing-main.done, .typing-sub.done {
+  border-right: none; 
+  animation: none; 
+}
+
+
+.typing-main {
+  animation: typingMain 4s steps(30, end) 1s forwards, textColorChange 4s forwards, blinkCursor 0.75s step-end infinite;
+}
+
+.typing-sub {
+  animation: typingSub 5s steps(50, end) 5s forwards, textColorChange 5s forwards, blinkCursor 0.75s step-end infinite;
+}
+
+@keyframes textColorChange {
+  0% { color: #3793f0; }
+  100% { color: #270c6e; }
+}
