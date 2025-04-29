@@ -1,3 +1,29 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  scroll-behavior: smooth;
+  color: #003366;
+}
+
+.navbar {
+  background: linear-gradient(135deg, #00509d, #003366);
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s;
+}
+
+/* Projects Background */
 .projects-bg {
   background-size: cover;
   background-position: center;
@@ -6,6 +32,7 @@
   padding: 40px 20px; 
   position: relative;
   background-color: #f0f4f8; 
+  padding-top: 100px; /* Adjust this based on your navbar height */
 }
 
 .projects {
@@ -107,7 +134,6 @@
   color: #003366;
   transform: scale(1.05);
 }
-
 
 @media (max-width: 768px) {
   .projects h1 {

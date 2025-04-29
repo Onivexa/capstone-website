@@ -22,165 +22,163 @@
   position: relative;
   z-index: 2;
   text-align: center;
-  padding: 100px 20px;
+  padding: 80px 20px;
   max-width: 1200px;
   margin: 0 auto;
   animation: fadeInUp 1s ease-in-out;
 }
 
+.about-section h2 {
+  font-size: 42px;
+  font-weight: 900;
+  color: #003366;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.team-member {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 40px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+  gap: 30px;
+  transition: all 0.4s ease-in-out;
+}
+
+.team-member:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.team-member.left {
+  flex-direction: row;
+}
+
+.team-member.right {
+  flex-direction: row-reverse;
+}
+
+.profile-img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.team-member:hover .profile-img {
+  transform: scale(1.15);
+}
+
+.team-info {
+  flex: 1;
+  text-align: center;
+  max-width: 600px;
+}
+
+.team-info h3 {
+  margin: 0;
+  color: #00509d;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.team-info p {
+  margin: 10px 0;
+  font-size: 18px;
+  color: #555;
+}
+
+.fb-link {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.fb-logo {
+  width: 34px;
+  height: 34px;
+  padding: 5px;
+  border-radius: 50%;
+  background: white;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.fb-logo:hover {
+  transform: scale(1.15);
+  background: #e9f1fb;
+  border-color: #0e5a9c;
+}
+
+.additional-info {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.additional-info h2 {
+  font-size: 30px;
+  color: #00509d;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.additional-info p {
+  font-size: 18px;
+  color: #444;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
   .about-section h2 {
-    font-size: 42px;
-    font-weight: 900;
-    color: #003366;
-    margin-bottom: 50px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    font-size: 28px;
   }
-  
 
   .team-member {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 1000px;
-    margin: 30px auto;
-    padding: 40px;
-    background: white;
-    border-radius: 20px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-    flex-wrap: wrap;
-    gap: 30px;
-    transition: all 0.4s ease-in-out;
-  }
-  
-  .team-member:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-  }
-  
-  .team-member.left {
-    flex-direction: row;
-  }
-  
-  .team-member.right {
-    flex-direction: row-reverse;
-  }
-  
-  .profile-img {
-    width: 130px;
-    height: 130px;
-    border-radius: 50%;
-    object-fit: cover;
-    transition: transform 0.3s ease-in-out;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  }
-  
-  .team-member:hover .profile-img {
-    transform: scale(1.15);
-  }
-  
-  .team-info {
-    flex: 1;
-    text-align: center;
-    max-width: 600px;
-  }
-  
-  .team-info h3 {
-    margin: 0;
-    color: #00509d;
-    font-size: 26px;
-    font-weight: bold;
-  }
-  
-  .team-info p {
-    margin: 10px 0;
-    font-size: 18px;
-    color: #555;
+    flex-direction: column !important;
+    padding: 30px 20px;
   }
 
-  .fb-link {
-    display: inline-block;
-    margin-top: 10px;
+  .profile-img {
+    width: 100px;
+    height: 100px;
   }
-  
-  .fb-logo {
-    width: 34px;
-    height: 34px;
-    padding: 5px;
-    border-radius: 50%;
-    background: white;
-    transition: transform 0.3s ease;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  .team-info h3 {
+    font-size: 20px;
   }
-  
-  .fb-logo:hover {
-    transform: scale(1.15);
-    background: #e9f1fb;
-    border-color: #0e5a9c;
-  }
-  
-  .additional-info {
-    max-width: 1000px;
-    margin: 60px auto;
-    padding: 40px;
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 20px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    animation: fadeInUp 1s ease-in-out;
-  }
-  
-  .additional-info h2 {
-    font-size: 30px;
-    color: #00509d;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-  }
-  
+
+  .team-info p,
   .additional-info p {
-    font-size: 18px;
-    color: #444;
-    line-height: 1.8;
-    margin-bottom: 15px;
+    font-size: 16px;
   }
-  
-@media (max-width: 768px) {
-    .about-section h2 {
-      font-size: 28px;
-    }
-  
-    .team-member {
-      flex-direction: column !important;
-      padding: 30px 20px;
-    }
-  
-    .profile-img {
-      width: 100px;
-      height: 100px;
-    }
-  
-    .team-info h3 {
-      font-size: 20px;
-    }
-  
-    .team-info p,
-    .additional-info p {
-      font-size: 16px;
-    }
-  
-    .additional-info h2 {
-      font-size: 24px;
-    }
+
+  .additional-info h2 {
+    font-size: 24px;
   }
-  
-  @keyframes fadeInUp {
-    0% {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
   }
-  
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

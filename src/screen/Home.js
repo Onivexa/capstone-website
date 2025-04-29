@@ -11,7 +11,7 @@ function Home() {
       <section className="slide title-slide">
         <h1 className="typing-main">DiagnostiCode</h1>
         <p className="typing-sub">
-          ICD-10 Code Conversion & Diagnostic Counter System
+          ICD-10 Code Conversion
         </p>
       </section>
 
