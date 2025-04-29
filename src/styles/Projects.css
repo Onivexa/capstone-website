@@ -136,6 +136,9 @@ html, body {
 }
 
 @media (max-width: 768px) {
+  .projects-bg {
+    margin-top: 150px;
+  }
   .projects h1 {
     font-size: 28px; 
   }

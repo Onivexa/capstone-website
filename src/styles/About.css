@@ -144,6 +144,9 @@
 }
 
 @media (max-width: 768px) {
+  .about-bg {
+    margin-top: 150px;
+  }
   .about-section h2 {
     font-size: 28px;
   }
